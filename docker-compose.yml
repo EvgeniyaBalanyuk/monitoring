@@ -49,6 +49,7 @@ services:
       args:
         KAPACITOR_TAG: ${KAPACITOR_TAG}
     image: "kapacitor"
+    privileged: true
     volumes:
       # Mount for kapacitor data directory
       - ./kapacitor/data/:/var/lib/kapacitor
